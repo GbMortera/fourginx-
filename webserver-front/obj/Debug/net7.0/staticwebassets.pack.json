@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/assets/css/cadastro.css",
+      "PackagePath": "staticwebassets/assets/css/cadastro.css"
+    },
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/assets/css/cadastrocopy.css",
+      "PackagePath": "staticwebassets/assets/css/cadastrocopy.css"
+    },
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/assets/css/index.css",
+      "PackagePath": "staticwebassets/assets/css/index.css"
+    },
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/assets/img/globe.svg",
+      "PackagePath": "staticwebassets/assets/img/globe.svg"
+    },
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/assets/img/logo.png",
+      "PackagePath": "staticwebassets/assets/img/logo.png"
+    },
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/cadastro.html",
+      "PackagePath": "staticwebassets/cadastro.html"
+    },
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/inicial.html",
+      "PackagePath": "staticwebassets/inicial.html"
+    },
+    {
+      "Id": "/home/fouradmin/webserverteste/wwwroot/viewserver.html",
+      "PackagePath": "staticwebassets/viewserver.html"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.webserverteste.props",
+      "PackagePath": "build\\webserverteste.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.webserverteste.props",
+      "PackagePath": "buildMultiTargeting\\webserverteste.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.webserverteste.props",
+      "PackagePath": "buildTransitive\\webserverteste.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.webserverteste.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

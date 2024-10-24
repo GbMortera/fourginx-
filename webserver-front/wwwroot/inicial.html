@@ -1,0 +1,49 @@
+#pagina html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações do Proxy</title>
+</head>
+<body>
+    <h1>Configurações do Proxy</h1>
+    <form id="configForm">
+        <label for="alias">Alias:</label>
+        <input type="text" id="alias" name="alias" required><br><br>
+        
+        <label for="porta">Porta:</label>
+        <input type="number" id="porta" name="porta" required><br><br>
+        
+        <label for="proxy_pass">Proxy Pass:</label>
+        <input type="text" id="proxy_pass" name="proxy_pass" required><br><br>
+        
+        <button type="submit">Gravar Configurações</button>
+    </form>
+
+    <script>
+        document.getElementById('configForm').addEventListener('submit', async (e) => {
+            e.preventDefault(); // Impede o envio padrão do formulário
+
+            const alias = document.getElementById('alias').value;
+            const porta = document.getElementById('porta').value;
+            const proxy_pass = document.getElementById('proxy_pass').value;
+
+            // Enviar os dados para o backend
+            const response = await fetch('/configura', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ alias, porta, proxy_pass }),
+            });
+
+            if (response.ok) {
+                alert('Configurações gravadas com sucesso!');
+            } else {
+                alert('Erro ao gravar configurações.');
+            }
+        });
+    </script>
+</body>
+</html>

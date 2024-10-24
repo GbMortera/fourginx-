@@ -1,0 +1,190 @@
+.card {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 555px;
+    height: 893px;
+    background-color: #030303;
+    z-index: 1;
+  }
+
+  .logo.fourginx {
+    position: absolute;
+    top: 156px;
+    left: 90px;
+    width: 375px;
+    height: 666px;
+    border-radius: 8px;
+    background-image: url(/home/fouradmin/webserverteste/wwwroot/assets/img/logo.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+  .icon {
+    position: absolute;
+    top: 190px;
+    left: 874px;
+    width: 40px;
+    height: 40px;
+    background-image: url(/home/fouradmin/webserverteste/wwwroot/assets/img/globe.svg);
+    background-size: cover; /* Ajusta o tamanho da imagem de fundo */
+  }
+  .text {
+    position: absolute;
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    top: 178px;
+    left: 934px;
+    width: 700px;
+    height: 62px;
+    
+
+    
+  }
+  .text_email {
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    top: 340px;
+    left: 722px;
+    width: 700px;
+    height: 62px;
+  
+  } 
+  .text_pass {
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    top: 479px;
+    left: 722px;
+    width: 700px;
+    height: 62px;
+  
+  } 
+  .text_remember {
+    position: absolute;
+    font-size: 14px;
+    font-family: 'Poppins';
+    top: 590px;
+    left:1095px;
+    width: 700px;
+    height: 62px;
+  
+  } 
+
+  .input-field {
+    position: absolute;
+    top: 380px;
+    left: 722px;
+    width: 570px;
+    height: 60px;
+    padding: 0px 8px;
+    border: 1px solid #8c8c8c;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #ffffff;
+    color: #8c8c8c;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 19px;
+    outline: none;
+  }
+
+  .password-field {
+    position: absolute;
+    top: 515px;
+    left: 722px;
+    width: 570px;
+    height: 60px;
+    padding: 0px 8px;
+    border: 1px solid #8c8c8c;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #ffffff;
+    color: #8c8c8c;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 19px;
+    outline: none;
+  }
+
+  .button{
+    cursor: pointer;
+    position: absolute;
+    top: 659px;
+    left: 722px;
+    width: 570px;
+    height: 60px;
+    padding: 0px 8px;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #4ddee2;
+    color: #000000;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 21px;
+    outline: none;
+  }
+  /* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    top: 583px;
+    left: 1225px;
+    
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #4ddee2;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 2em;
+    inset: 0;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .switch input:checked + .slider {
+    background: #000000;
+  }
+  
+  .switch input:focus + .slider {
+    box-shadow: 0 0 1px #000;
+  }
+  
+  .switch input:checked + .slider:before {
+    transform: translateX(1.6em);
+  }

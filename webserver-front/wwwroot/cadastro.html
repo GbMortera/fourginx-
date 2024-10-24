@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Hosts - Fourginx</title>
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="text_inicio">Cadastrar Hosts</div>
+        <div class="icon">
+        <img src="assets/img/globe.svg"></div>
+     <!--"> <div class="text_fourginx">Fourginx</div>-->
+        <a href="index.html">
+            <!--"><div class="button_sair">Sair</div>-->
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="name">Nome:</div>
+            <input class="input-name" type="text" placeholder="Digite o nome do servidor" id="name-input" /><br>
+
+            <div class="alias">Alias:</div>
+            <input class="input-alias" type="text" placeholder="Digite o endereço, ex: google.com.br" id="alias-input" /><br>
+
+            <div class="ip">IP:</div>
+            <input class="input-ip" type="text" placeholder="Digite seu IP, ex: 8.8.8.8" id="ip-input" /><br>
+
+            <div class="porta">Porta:</div>
+            <div class="ssl">
+                <input type="radio" name="porta" value="443" id="ssl-checkbox"> <label for="ssl-checkbox">SSL</label>
+            </div>
+            <div class="porta_80">
+                <input type="radio" name="porta" value="80" id="porta-80-checkbox"> <label for="porta-80-checkbox">80</label>
+            </div>
+            <div class="outra_porta">
+                <input type="radio" name="porta" value="outra" id="outra-porta-checkbox"> <label for="outra-porta-checkbox">Outra</label>
+            </div>
+            <div class="input_outraporta" style="display: none;">
+                <input type="text" placeholder="Digite a porta desejada" id="outra-porta-input">
+            </div>
+
+            <button class="button_cadastrar" id="cadastrarButton">Cadastrar</button>
+            <a href="index.html"><button class="button_voltar">Voltar</button></a>
+        </div>
+    </div>
+
+    
+
+    <script>
+        document.getElementById('outra-porta-checkbox').addEventListener('change', function() {
+            document.querySelector('.input_outraporta').style.display = this.checked ? 'block' : 'none';
+        });
+
+        document.getElementById('cadastrarButton').addEventListener('click', function() {
+            const selectedPort = document.querySelector('input[name="porta"]:checked');
+            const selectedPortValue = selectedPort ? (selectedPort.value === 'outra' ? document.getElementById('outra-porta-input').value : selectedPort.value) : null;
+
+            const name = document.getElementById('name-input').value;
+            const alias = document.getElementById('alias-input').value;
+            const ip = document.getElementById('ip-input').value;
+            const proxyPass = ip;
+
+            if (!name || !alias || !selectedPortValue) {
+                alert('Por favor, preencha todos os campos obrigatórios!');
+                return;
+            }
+
+            const configData = {
+                nome: name,
+                Alias: alias,
+                Porta: selectedPortValue,
+                ProxyPass: proxyPass
+            };
+
+            fetch('/configura', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(configData),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao gravar as configurações');
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                alert('Erro: ' + error.message);
+            });
+        });
+    </script>
+</body>
+</html>
